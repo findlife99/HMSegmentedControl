@@ -791,6 +791,9 @@
             if (self.isTouchEnabled)
                 [self setSelectedSegmentIndex:segment animated:self.shouldAnimateUserSelection notify:YES];
         }
+
+        if (self.superview)
+            [self sendActionsForControlEvents:UIControlEventTouchUpInside];
     }
 }
 
